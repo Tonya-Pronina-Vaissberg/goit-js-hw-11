@@ -127,6 +127,8 @@ function createMarkup(hitsArray) {
 
   function notiflixAlert(length, totalHits) {
     if (length === 0) {
+      loadMoreBtn.style.display = 'none';
+
       Notiflix.Notify.failure(
         'Sorry, there are no images matching your search query. Please try again.'
       );
@@ -139,7 +141,7 @@ function createMarkup(hitsArray) {
       Notiflix.Notify.success(`Hooray! We found ${totalHits} images.`);
     }
   
-    if (length < 40) {
+    if (pages === 13) {
       loadMoreBtn.style.display = 'none';
        
       Notiflix.Notify.info(
