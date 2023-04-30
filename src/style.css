@@ -133,3 +133,39 @@ img:hover {
 .photo-link {
     text-decoration: none;
 }
+
+.btn-up {
+    position: fixed;
+    right: 120px;
+    bottom: 60px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 70px;
+
+    padding: 8px;
+
+    font-size: 24px;
+    background: floralwhite;
+    color: #5a6674;
+    border: none;
+    appearance: none;
+    outline: none;
+    border-radius: 50px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* .btn-up::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background: transparent no-repeat center center;
+    background-size: 100% 100%;
+  } */
+  
+  .btn-up_hide {
+    display: none;
+  }
+  
