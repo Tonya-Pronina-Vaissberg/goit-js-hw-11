@@ -69,11 +69,14 @@ async function pixabay(name, pages) {
     try {
          const response = await axios.get(API_URL, options);
   
-      
          notiflixAlert(
         response.data.hits.length, 
         response.data.total 
       );
+
+      if(response.data.total <=40) {
+        loadMoreBtn.style.display = 'none';
+      };
   
       createMarkup(response.data); 
     } catch (error) {
